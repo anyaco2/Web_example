@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    
+    font-family: sans-serif;
+}
+
+.section{
+    background-color: rgb(250, 250, 250);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope{
+    position: relative;
+    width: 261px;
+    height: 110px;
+
+}
+
+.env-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .2s;
+    transform: translateY(-100%);
+    transform-origin: bottom;
+    perspective: 1000px;
+}
+
+.env-body{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.paper{
+    background-color: #beb9b9;
+    width: 120px;
+    height: 90px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    transform: translateY(-40px);
+    transition: .2s;
+    bottom: 0;
+}
+
+.env-top_close{
+    transform: translateY(-115%) rotateX(180deg);
+    z-index: 2;
+}
+
+.paper_close{
+    transform: translateY(-10%);
+    height: 40px;
+}

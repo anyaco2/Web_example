@@ -1,0 +1,30 @@
+input[type="checkbox"]{
+    display: none;
+}
+
+label{
+    padding-left: 20px;
+}
+
+label::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    vertical-align: middle;
+    margin-left: -10px;
+    margin-right: 10px;
+    transition: 0.2s;
+    background-color: red;
+    border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + label::before{
+    
+    content: ' ';
+    text-align: center;
+    font-family: sans-serif;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1442/1442912.png" );
+    background-size: 100%;
+}

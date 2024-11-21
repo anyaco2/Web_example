@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: changes 3s ease-out infinite;
+}
+
+.block{
+    height: 200px;
+    width: 200px;
+    background: green;
+    animation: 
+        change 3s ease infinite alternate,
+        move 6s linear infinite alternate ;
+    
+}
+
+@keyframes changes{
+    0%,100%{
+        background: rgb(249, 250, 249);
+
+    }
+    50%{
+        background: rgb(6, 6, 6);
+    }
+}
+
+
+@keyframes change{
+    0%,100%{
+        background: green;
+
+    }
+    50%{
+        background: yellow;
+    }
+}
+
+@keyframes move{
+    0%,100%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(150px,0);
+    }
+    75%{
+        transform: translate(-150px,0);
+    }
+}
